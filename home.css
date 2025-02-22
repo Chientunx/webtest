@@ -49,21 +49,51 @@ body {
     cursor: pointer;
 }
 
-.head .detail-1 button {
+.mail-button {
+    position: relative;
+    display: inline-block;
+    padding: 4px;
+    border-radius: 100px;
+    background: var(--gradient-4);
+    background-size: 200% 200%;
+    animation: borderAnimation 3s linear infinite;
+}
+
+@keyframes borderAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.mail-button button {
     width: auto;
     height: auto;
     padding: 4px 24px;
-    background: var(--main);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background:transparent;
     font-size: 16px;
     font-weight: medium;
-    border: 1.5px solid;
-    border-image-source: var(--Gradient-2);
-    border-image-slice: 1;
+    border: 1.5px solid transparent;
     border-radius: 100px;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
+    color: #B5EDEC;
 }
+
+.mail-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 100px;
+    padding: 3px;
+    background: var(--gradient-4);
+    background-size: 200% 200%;
+    animation: borderAnimation 3s linear infinite;
+    mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    mask-composite: exclude;
+}
+
+
 #status {
     font-size: 14px;
     font-weight: 300;
