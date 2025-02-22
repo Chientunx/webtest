@@ -1,0 +1,215 @@
+:root {
+    --Gradient-1: radial-gradient(70.75% 70.75% at 50% 50%, #B5EDEC 0%, #090E17 100%);
+    --Gradient-2: linear-gradient(317deg, #B5EDEC 23.86%, #050912 54.33%, #B5EDEC 54.79%, #050912 84.97%);
+    --gradient-4: linear-gradient(139deg, #B5EDEC 8.67%, #090E17 50.48%, #B5EDEC 102.53%);
+    --main: linear-gradient(91deg, #B5EDEC 0.03%, #E4FCFC 99.97%);
+    --glass: linear-gradient(145deg, rgba(255, 255, 255, 0.20) 6.64%, rgba(255, 255, 255, 0.75) 66.35%, rgba(255, 255, 255, 0.55) 91.48%);
+    --dark-text: #0F1A1A;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./source-img/bg-mask.png');
+    background-size: cover;
+
+}
+
+.head {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    margin: 0;
+    padding: 40px 60px;
+}
+.head .detail-1 {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head .detail-1 select {
+    appearance: auto;
+    width: 60px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: var(--main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.head .detail-1 button {
+    width: auto;
+    height: auto;
+    padding: 4px 24px;
+    background: var(--main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 16px;
+    font-weight: medium;
+    border: 1.5px solid;
+    border-image-source: var(--Gradient-2);
+    border-image-slice: 1;
+    border-radius: 100px;
+    cursor: pointer;
+}
+#status {
+    font-size: 14px;
+    font-weight: 300;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: var(--dark-text);
+    padding: 10px 30px;
+    border-radius: 100px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
+
+
+.intro {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+.intro .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.intro .profile .avatar img {
+    width: 220px;
+    height: auto;
+    align-items: center;
+}
+.intro .profile .name img {
+    width: 220px;
+    height: auto;
+}
+
+.intro hr {
+    width: 300px;
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    background: var(--Gradient-1);
+
+}
+
+
+.intro .clickbutton {
+    width: 300px;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro .clickbutton button {
+    width: auto;
+    height: auto;
+    padding: 8px 24px;
+    background: var(--glass);
+    border: none;
+    border-radius: 100px;
+    color: var(--dark-text) ;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.3;
+    transition: none;
+    cursor: pointer;
+}
+.intro .clickbutton button:hover {
+    /* background: url('./source-img/about-me-hover.png') center/cover no-repeat; */
+    width: auto;
+    height: auto;
+    padding: 8px 24px;
+    background: var(--gradient-4);
+    border: none;
+    border-radius: 100px;
+    color: white ;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 1;
+    transition:  0.3s linear;
+    /* backdrop-filter: drop-shadow(10px); */
+}
+
+.intro .clickbutton a .img-default-in {
+    width: 40px;
+    height: auto;
+    opacity: 0.3;
+    transition: none;
+}
+.intro .clickbutton a .img-default-in:hover {
+    background: url('./source-img/insta-color.jpg') center/cover no-repeat;
+    width: 40px;
+    height: auto;
+    opacity: 1;
+    transition: 0.5s linear ;
+
+}
+.intro .clickbutton a .img-default-be {
+    width: 40px;
+    height: auto;
+    opacity: 0.3;
+    transition: none;
+}
+.intro .clickbutton a .img-default-be:hover {
+    background: url('./source-img/be-color.jpg') center/cover no-repeat;
+    width: 40px;
+    height: auto;
+    opacity: 1;
+    transition: 0.5s linear ;
+}
+
+
+.collections {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    padding: 0px 160px;
+}
+.collections img {
+    width: 380px;
+    height: auto;
+    transition: none;
+    opacity: 0.95;
+}
+
+.collections img:hover {
+    background: url('./source-img/digi-image-hover.png') center/cover no-repeat;
+    width: 380px;
+    height: auto;
+    transition: 0.5s linear;
+    opacity: 1;
+}
